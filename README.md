@@ -9,9 +9,19 @@ groupMembers = ['Emil Klausen', 'Edmond Petres, 'Lucas Fredmark', 'Plamen Getsov
 [https://www.kaggle.com/khsamaha/aviation-accident-database-synopses](https://www.kaggle.com/khsamaha/aviation-accident-database-synopses)
 
 Questions:
-- In the US, has aviation accidents causing fatality improved in the past 70 years?
-- Which phase (ex. take off, cruise, landing..) of the flight contributed to the most fatality?
+- Which year produced the most fatal and non-fatal accidents and where?
+- Which phase of the flight (ex. take off, cruise, landing..) contributed to the most fatality?
 - What was the purpose of the flight that contributed the most fatalities?
-- Which of the 50 states in the US saw the most fatal accidents?
+- Which of the 50 states in the US saw the most injuries?
+- Which Boeing model had the most fatal injuries?
+- Which year was the most fatal?
+
 
 **2. TBA**
+[Dataset link](https://www.kaggle.com/START-UMD/gtd)
+
+Questions:
+- Which country has had the most terrorist attacks?
+- What is the most commond target type worldwide?
+- What is the most and least used weapon type in terrorist attacks?
+- What nationality was the most targeted?
