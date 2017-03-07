@@ -1,11 +1,11 @@
 ## Questions we investigated: ##
-1. Which platform is the most popular in the regions NA, EU and Japan? Plamen Getsov 
-2. How big a share of the global sales does the US sales cover? Edmond Petres
-3. Which game genre is the most popular in 2012? Emil Klausen
-4. Which publisher has the most titles in top 100? Lucas Meulengracht Fredmark
+1. Which platform is the most popular in the regions NA, EU and Japan? **Plamen Getsov**
+2. How big a share of the global sales does the US sales cover? **Edmond Petres**
+3. Which game genre is the most popular in 2012? **Emil Klausen**
+4. Which publisher has the most titles in top 100? **Lucas Meulengracht Fredmark**
 
 
-## 2. Eddie's solution##
+## Question No.2 ##
 >How big a share of the global sales does the US sales cover?
 
 ```python
