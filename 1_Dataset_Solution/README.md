@@ -6,6 +6,7 @@
 
 
 ## Question No.1 ##
+> Which platform is the most popular in the regions NA, EU and Japan?
 
 ```python
 import csv
@@ -94,7 +95,9 @@ for mylist in dd[:,4]:
 
 print(count)
 ```
+
 which prints:
+
 ```
 {'Sports': 2346, 'Puzzle': 582, 'Simulation': 867, 'Shooter': 1310, 'Platform': 886, 'Adventure': 1286, 'Strategy': 681, 'Role-Playing': 1488, 'Racing': 1249, 'Action': 3316, 'Misc': 1739, 'Fighting': 848}
 ```
@@ -102,6 +105,7 @@ which prints:
 
 ## Question No.4 ##
 > Which publisher has the most titles in top 100?
+
 ```python
 import csv
 
@@ -126,7 +130,9 @@ with open(filename) as f:
 
     print('\n{} has the most games in the top 100'.format(pub_sorted_keys[0]))
 ```
+
 which prints:
+
 ```
 Nintendo has 52 game(s) in the top 100
 Activision has 14 game(s) in the top 100
