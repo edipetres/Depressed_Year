@@ -15,28 +15,28 @@ from collections import Counter
 filename = "vgsales.csv"
 
 with open(filename) as f:
-reader = csv.reader(f)
-header_row = next(reader)
-platform_counter = 0
+    reader = csv.reader(f)
+    header_row = next(reader)
+    platform_counter = 0
 
-#    NAcheck = None
-#    EUcheck = None
-#    JPcheck = None
+    #    NAcheck = None
+    #    EUcheck = None
+    #    JPcheck = None
 
-#us_sales = row[6]
-#eu_sales = row[7]
-#jp_sales = row[8]
-#print(us_sales)
+    #us_sales = row[6]
+    #eu_sales = row[7]
+    #jp_sales = row[8]
+    #print(us_sales)
 
-#    if (us_sales > eu_sales and us_sales > jp_sales):
-#        NAcheck = True
-#    if (eu_sales > us_sales and eu_sales > jp_sales):
-#        EUcheck = True
-#    if (jp_sales > us_sales and jp_sales > eu_sales):
-#        JPcheck = True
+    #    if (us_sales > eu_sales and us_sales > jp_sales):
+    #        NAcheck = True
+    #    if (eu_sales > us_sales and eu_sales > jp_sales):
+    #        EUcheck = True
+    #    if (jp_sales > us_sales and jp_sales > eu_sales):
+    #        JPcheck = True
 
-platform = (row[2] for row in csv.reader(f))
-print("Most used platform: {0}".format(Counter(platform).most_common()[0][0]))
+    platform = (row[2] for row in csv.reader(f))
+    print("Most used platform: {0}".format(Counter(platform).most_common()[0][0]))
 ```
 
 
