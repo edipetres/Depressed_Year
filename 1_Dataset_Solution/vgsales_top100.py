@@ -1,6 +1,6 @@
 import csv
 
-filename = 'vgsales.csv' # download file from url instead
+filename = 'vgsales.csv'  # download file from url instead
 
 with open(filename) as f:
     reader = csv.reader(f)
