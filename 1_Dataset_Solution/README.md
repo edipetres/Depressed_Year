@@ -6,6 +6,7 @@
 
 
 ## Question No.1 ##
+> Which platform is the most popular in the regions NA, EU and Japan?
 
 ```python
 import csv
@@ -48,22 +49,21 @@ import csv
 filename = "vgsales.csv"
 
 with open(filename) as f:
-reader = csv.reader(f)
-header_row = next(reader)
+    reader = csv.reader(f)
+    header_row = next(reader)
 
-global_sales = 0.0
-us_sales = 0.0
-for row in reader:
-global_sales += float(row[10])
-us_sales += float(row[6])
+    global_sales = 0.0
+    us_sales = 0.0
+    for row in reader:
+        global_sales += float(row[10])
+        us_sales += float(row[6])
+    
+    us_share = (us_sales * 100) / global_sales
 
-us_share = (us_sales * 100) / global_sales
-
-print('\n\nWhat is the proportion of US sales compared to global statistics?\n')
-print("Global sales: \t " + '%.3f' % global_sales)
-print("US sales: \t " + '%.3f' % us_sales)
-print("US share: \t" + "%.2f" % us_share + "% of global sales")
-
+    print('\n\nWhat is the proportion of US sales compared to global statistics?\n')
+    print("Global sales: \t " + '%.3f' % global_sales)
+    print("US sales: \t " + '%.3f' % us_sales)
+    print("US share: \t" + "%.2f" % us_share + "% of global sales")
 ```
 
 which prints:
@@ -90,12 +90,61 @@ dd = bef_stats_df.as_matrix()
 
 count = {};
 for mylist in dd[:,4]:
-count.setdefault(mylist, 0)
-count[mylist] += 1;
+    count.setdefault(mylist, 0)
+    count[mylist] += 1;
 
 print(count)
 ```
+
 which prints:
+
 ```
 {'Sports': 2346, 'Puzzle': 582, 'Simulation': 867, 'Shooter': 1310, 'Platform': 886, 'Adventure': 1286, 'Strategy': 681, 'Role-Playing': 1488, 'Racing': 1249, 'Action': 3316, 'Misc': 1739, 'Fighting': 848}
+```
+
+
+## Question No.4 ##
+> Which publisher has the most titles in top 100?
+
+```python
+import csv
+
+filename = 'vgsales.csv' # download file from url instead
+
+with open(filename) as f:
+    reader = csv.reader(f)
+    next(reader)
+
+    publishers = {}
+
+    for i in range(100):
+        row = next(reader)
+        publisher = row[5]
+        publishers.setdefault(publisher, 0)
+        publishers[publisher] += 1
+
+    pub_sorted_keys = sorted(publishers, key=publishers.get, reverse=True)
+
+    for publisher in pub_sorted_keys:
+        print('{} has {} game(s) in the top 100'.format(publisher, publishers[publisher]))
+
+    print('\n{} has the most games in the top 100'.format(pub_sorted_keys[0]))
+```
+
+which prints:
+
+```
+Nintendo has 52 game(s) in the top 100
+Activision has 14 game(s) in the top 100
+Take-Two Interactive has 9 game(s) in the top 100
+Sony Computer Entertainment has 8 game(s) in the top 100
+Microsoft Game Studios has 6 game(s) in the top 100
+Electronic Arts has 5 game(s) in the top 100
+Ubisoft has 2 game(s) in the top 100
+SquareSoft has 1 game(s) in the top 100
+Atari has 1 game(s) in the top 100
+Sega has 1 game(s) in the top 100
+Bethesda Softworks has 1 game(s) in the top 100
+
+Nintendo has the most games in the top 100
 ```
