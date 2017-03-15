@@ -2,26 +2,17 @@
 
 groupMembers = ['Emil Klausen', 'Edmond Petres, 'Lucas Fredmark', 'Plamen Getsov']
 
-## Ideas for datasets
-
-**1. Aviation Accident Database & Synopses**
+## Aviation Accident Database & Synopses
 
 [https://www.kaggle.com/khsamaha/aviation-accident-database-synopses](https://www.kaggle.com/khsamaha/aviation-accident-database-synopses)
 
 Questions:
-- Which year produced the most fatal and non-fatal accidents and where?
-- Which phase of the flight (ex. take off, cruise, landing..) contributed to the most fatality?
-- What was the purpose of the flight that contributed the most fatalities?
-- Which of the 50 states in the US saw the most injuries?
-- Which Boeing model had the most fatal injuries?
-- Which year was the most fatal?
+- How do the flight phases (ex. take off, cruise, landing..) contribute to fatalities? Chart!
+- Which 5 states saw the most injuries in the US? Show it on a barchart!
+- Which 5 aircraft models had the most injuries (fatal, serious, minor)? Show them on a piechart!
+- What was the distribution of fatal injuries during the last 20 years? Show it on a barchart!
+- What was the survival rate for substantial AND destroyed aircrafts since 1993? Compare it on two pie charts!
+(take into account the three colums with non-fatal injuries)
 
-
-**2. TBA**
-[Dataset link](https://www.kaggle.com/START-UMD/gtd)
-
-Questions:
-- Which country has had the most terrorist attacks?
-- What is the most commond target type worldwide?
-- What is the most and least used weapon type in terrorist attacks?
-- What nationality was the most targeted?
+### Notes:
+- Be wary of missing data in the columns
