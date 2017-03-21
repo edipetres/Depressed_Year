@@ -8,10 +8,6 @@ with open(filename) as file:
     reader = csv.reader(file)
     header_row = next(reader)
 
-    for i, v in enumerate(header_row):
-         first_row = next(reader)
-         #print(i, v, first_row[i])
-
     ownersForMilitary = {}
     for row in reader:
         usedFor = row[4]
@@ -22,7 +18,6 @@ with open(filename) as file:
                 ownersForMilitary[ownedBy] = 1
             else:
                 ownersForMilitary[ownedBy] += 1
-            
 
-    
+    print("Countries with number of satellites that (also) has a military purpose")
     pprint.pprint(ownersForMilitary)
