@@ -6,7 +6,7 @@ groupMembers = ['Emil Klausen', 'Edmond Petres, 'Lucas Fredmark', 'Plamen Getsov
 
 [https://www.kaggle.com/khsamaha/aviation-accident-database-synopses](https://www.kaggle.com/khsamaha/aviation-accident-database-synopses)
 
-[Webget URL](https://github.com/edipetres/Depressed_Year/raw/master/Dataset_Assignment/AviationDataset.csv)
+Dataset for webget download: [https://github.com/edipetres/Depressed_Year/raw/master/Dataset_Assignment/AviationDataset.csv](https://github.com/edipetres/Depressed_Year/raw/master/Dataset_Assignment/AviationDataset.csv)
 
 ### Questions:
 - How do the flight phases (ex. take off, cruise, landing..) contribute to fatalities? Chart!
