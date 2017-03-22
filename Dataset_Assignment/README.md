@@ -1,7 +1,3 @@
-# Python_Dataset_Project
-
-groupMembers = ['Emil Klausen', 'Edmond Petres, 'Lucas Fredmark', 'Plamen Getsov']
-
 ## Aviation Accident Database & Synopses
 
 [https://www.kaggle.com/khsamaha/aviation-accident-database-synopses](https://www.kaggle.com/khsamaha/aviation-accident-database-synopses)
@@ -19,3 +15,5 @@ URL for webget download: [https://github.com/edipetres/Depressed_Year/raw/master
 ### Notes:
 - Be wary of missing data in the columns
 - Injuries are counted from the _Total Serious Injuries_ and _Total Minor Injuries_ columns (by default fatal injuries are not counted here)
+
+groupMembers = ['Emil Klausen', 'Edmond Petres, 'Lucas Fredmark', 'Plamen Getsov']
