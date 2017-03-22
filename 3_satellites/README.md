@@ -142,7 +142,7 @@ Which prints:
  'United Kingdom': 8}
  ```
 
-## 4. Wich country has the lightest satelite and how much does it weight?
+## 4. Which country has the lightest satelite and how much does it weight?
 
 ``` python
 import csv
@@ -175,4 +175,44 @@ Which prints:
 
 `The lightest satellite "NUDT Phonesat" comes from China and weighs 0 kilograms.`
 
+## 5. Compare the usage of satelites, between the 5 poorest countries and the 5 welthiest countries, according to the HDI dataset (see first dataset), plotting optional.
+``` python
+import csv
 
+best_countries = ['Norway', 'Australia',
+'Switzerland', 'Denmark', 'Netherlands']
+best_countries_purpose = {}
+
+last_countries = ['Niger', 'Central African Republic', 'Eritrea', 'Chad', 'Burundi']
+last_countries_purpose = {}
+
+filename = "satellite_dataset.csv"
+
+with open(filename) as f:
+reader = csv.reader(f)
+header_row = next(reader)
+
+for row in reader:
+purpose = row[5]
+country = row[3]
+
+if country in best_countries:    
+best_countries_purpose[country] = purpose
+
+if country in last_countries:
+last_countries_purpose[country] = purpose
+
+print("The purpose of the satellites for the top 5 countries \n" + str(best_countries_purpose))
+print("The purpose of the satellites for the lowest 5 countries \n" + str(last_countries_purpose))
+
+```
+
+Which prints:
+
+```
+The purpose of the satellites for the top 5 countries
+{'Australia': 'Communications', 'Denmark': 'Technology Development', 'Netherlands': 'Communicatio
+ns', 'Norway': 'Communications', 'Switzerland': 'Technology Development'}
+The purpose of the satellites for the lowest 5 countries
+{}
+```
