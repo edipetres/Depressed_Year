@@ -13,7 +13,7 @@ URL for webget download: [https://github.com/edipetres/Depressed_Year/raw/master
 
 ## Notes:
 - Be wary of missing data in the columns
-- \* Injuries are counted from the _Total Serious Injuries_ and _Total Minor Injuries_ columns (by default fatal injuries are not counted here)
-- \** Survivals are counted from the three columns with injuries that are non-fatal (serious, minor injuries and uninjured)
+\* Injuries are counted from the _Total Serious Injuries_ and _Total Minor Injuries_ columns (by default fatal injuries are not counted here)
+\** Survivals are counted from the three columns with injuries that are non-fatal (serious, minor injuries and uninjured)
 
 groupMembers = ['Emil Klausen', 'Edmond Petres, 'Lucas Fredmark', 'Plamen Getsov']
