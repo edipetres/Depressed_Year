@@ -2,7 +2,7 @@
 
 Dataset on kaggle.com:  [https://www.kaggle.com/khsamaha/aviation-accident-database-synopses](https://www.kaggle.com/khsamaha/aviation-accident-database-synopses)
 
-URL for webget download: [https://github.com/edipetres/Depressed_Year/raw/master/Dataset_Assignment/AviationDataset.csv](https://github.com/edipetres/Depressed_Year/raw/master/Dataset_Assignment/AviationDataset.csv)
+URL for webget download: [https://raw.githubusercontent.com/edipetres/Depressed_Year/master/Dataset_Assignment/AviationDataset.csv](https://raw.githubusercontent.com/edipetres/Depressed_Year/master/Dataset_Assignment/AviationDataset.csv)
 
 ## Questions:
 1. How do the flight phases (ex. take off, cruise, landing..) contribute to fatalities? Chart!
