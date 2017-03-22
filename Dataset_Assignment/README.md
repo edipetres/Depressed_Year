@@ -16,4 +16,4 @@ Questions:
 
 ### Notes:
 - Be wary of missing data in the columns
-- Injuries are counted from the _Total Serious Snjuries_ and _Total Minor Injuries_ columns (by default fatal injuries are not counted here)
+- Injuries are counted from the _Total Serious Injuries_ and _Total Minor Injuries_ columns (by default fatal injuries are not counted here)
