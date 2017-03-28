@@ -5,6 +5,8 @@ import os
 import csv
 from pprint import pprint
 import matplotlib.pyplot as plt
+import numpy as np
+import collections
 
 url = 'https://raw.githubusercontent.com/edipetres/Depressed_Year/master/Dataset_Assignment/AviationDataset.csv'
 fname = url.split('/')[-1]
@@ -25,7 +27,7 @@ with open(fname) as f:
     distribution = {}
     for row in reader:
         total_fatal = 0
-        flight_phase = row[28]
+        flight_phase = row[28].title()
         if(row[23].isdigit()):
             total_fatal = int(row[23])
 
@@ -33,22 +35,24 @@ with open(fname) as f:
             distribution[flight_phase] = total_fatal
         else:
             distribution[flight_phase] += total_fatal
-
-    print(range(len(distribution.keys())))
-    phases = range(len(distribution.keys()))
-    no_fatalities = list(distribution.values())
-
-    for ind, val in enumerate(distribution.keys()):
-        print(ind,val)
     
+    # rename empty key to Unknown
+    distribution['Unknown'] = distribution.pop('')
+    
+    # sort the dictionary
+    sorted_dict = collections.OrderedDict(sorted(distribution.items(), key=lambda t: t[1]))
 
-    plt.bar(phases, no_fatalities, width=1, linewidth=1, align='center')
-    plt.ticklabel_format(useOffset=True)
+    # make lists for plotting
+    phases = range(len(sorted_dict.keys()))
+    no_fatalities = list(sorted_dict.values())
 
     title = 'Distribution of fatalities during different flight phases'
     plt.title(title, fontsize=12)
     plt.xlabel("Phases", fontsize=10)
     plt.ylabel("Fatalities", fontsize=10)
+    plt.bar(phases, no_fatalities, width=0.8, linewidth=0.5, align='center')
+    myxticks = sorted_dict.keys()
+    plt.xticks(phases, myxticks)
     plt.tick_params(axis='both', which='major', labelsize=10)
     plt.show()
 
