@@ -1,7 +1,20 @@
-Question 1:
+# Solutions
 
-# 1. How do the flight phases (ex. take off, cruise, landing..) contribute to fatalities? Chart!
+## 1. How do the flight phases (ex. take off, cruise, landing..) contribute to fatalities? Chart!
 
+### Prerequisites
+
+``` python
+import requests
+import os
+import csv
+from pprint import pprint
+import matplotlib.pyplot as plt
+import numpy as np
+import collections
+```
+
+``` python
 import requests
 import os
 import csv
@@ -57,12 +70,24 @@ with open(fname) as f:
     plt.xticks(phases, myxticks)
     plt.tick_params(axis='both', which='major', labelsize=10)
     plt.show()
+```
 
 http://prntscr.com/eprulg
 
--------------------------------------------------------------------
-Question 2
+## 2. Which 5 locations saw the most injuries in the US? Show it on a barchart!
 
+### Prerequisites
+
+``` python
+import os
+import requests
+import csv
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
+```
+
+``` python
 import os
 import requests
 import csv
@@ -119,16 +144,22 @@ plt.xlabel('Locations in the United States', fontsize=12)
 plt.ylabel('Injuries', fontsize=12)
 plt.tick_params(axis='both', which='major', labelsize=7)
 plt.savefig('top5_most_injuries_plot.png', bbox_inches='tight')
+```
 
 http://prnt.sc/eprvpn
 
---------------------------------------------------------------------
+## 3. Which 5 aircraft models had the most injuries (fatal, serious, minor)? Show them on a piechart!
 
-Question 3
+### Prerequisites
 
+``` python
 import csv
 import matplotlib.pyplot as plt
+```
 
+``` python
+import csv
+import matplotlib.pyplot as plt
 
 filename = "AviationDataEnd2016UP.csv"
 
@@ -169,13 +200,21 @@ with open(filename, encoding='latin-1') as f:
     ##print(injuries)
 
     plt.title("The top five aircraft models regarding injuries")
+```
 
 No Pie Chart
 
-------------------------------------------------------------------
+## 4. What was the distribution of fatal injuries during the last 20 years? Show it on a barchart!
 
-Question 4
+### Prerequisites
 
+``` python
+import warnings
+import csv 
+import matplotlib.pyplot as plt
+```
+
+``` python
 import warnings
 warnings.filterwarnings('ignore')
 
@@ -224,5 +263,6 @@ plt.ylabel("Fatalities", fontsize=10)
 plt.xlabel("Year", fontsize=10)
 plt.tick_params(axis='both', which='major', labelsize=10)
 plt.show()
+```
 
 http://prntscr.com/eprxam
