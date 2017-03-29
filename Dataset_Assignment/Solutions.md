@@ -74,7 +74,7 @@ with open(fname) as f:
     plt.show()
 ```
 
-http://prntscr.com/eprulg
+![http://image.prntscr.com/image/48f73e7c793a4f1cae423699f9703493.png](http://image.prntscr.com/image/48f73e7c793a4f1cae423699f9703493.png)
 
 ## 2. Which 5 locations saw the most injuries in the US? Show it on a barchart!
 
@@ -150,7 +150,7 @@ plt.tick_params(axis='both', which='major', labelsize=7)
 plt.savefig('top5_most_injuries_plot.png', bbox_inches='tight')
 ```
 
-http://prnt.sc/eprvpn
+![http://image.prntscr.com/image/4fe83449b22140fb9b620e682da8bbe0.png](http://image.prntscr.com/image/4fe83449b22140fb9b620e682da8bbe0.png)
 
 ## 3. Which 5 aircraft models had the most injuries (fatal, serious, minor)? Show them on a piechart!
 
@@ -272,5 +272,3 @@ plt.xlabel("Year", fontsize=10)
 plt.tick_params(axis='both', which='major', labelsize=10)
 plt.show()
 ```
-
-http://prntscr.com/eprxam
