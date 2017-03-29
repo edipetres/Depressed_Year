@@ -211,6 +211,8 @@ with open(filename, encoding='latin-1') as f:
     plt.title("The top five aircraft models regarding injuries")
 ```
 
+### Plot
+
 No Pie Chart
 
 ## 4. What was the distribution of fatal injuries during the last 20 years? Show it on a barchart!
@@ -275,3 +277,7 @@ plt.xlabel("Year", fontsize=10)
 plt.tick_params(axis='both', which='major', labelsize=10)
 plt.show()
 ```
+
+### Plot
+
+No Bar Chart
