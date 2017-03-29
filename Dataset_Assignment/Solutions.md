@@ -74,6 +74,8 @@ with open(fname) as f:
     plt.show()
 ```
 
+### Plot
+
 ![http://image.prntscr.com/image/48f73e7c793a4f1cae423699f9703493.png](http://image.prntscr.com/image/48f73e7c793a4f1cae423699f9703493.png)
 
 ## 2. Which 5 locations saw the most injuries in the US? Show it on a barchart!
@@ -149,6 +151,8 @@ plt.ylabel('Injuries', fontsize=12)
 plt.tick_params(axis='both', which='major', labelsize=7)
 plt.savefig('top5_most_injuries_plot.png', bbox_inches='tight')
 ```
+
+### Plot
 
 ![http://image.prntscr.com/image/4fe83449b22140fb9b620e682da8bbe0.png](http://image.prntscr.com/image/4fe83449b22140fb9b620e682da8bbe0.png)
 
