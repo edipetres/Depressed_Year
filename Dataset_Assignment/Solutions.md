@@ -14,6 +14,8 @@ import numpy as np
 import collections
 ```
 
+### Code
+
 ``` python
 import requests
 import os
@@ -87,6 +89,8 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 ```
 
+### Code
+
 ``` python
 import os
 import requests
@@ -157,6 +161,8 @@ import csv
 import matplotlib.pyplot as plt
 ```
 
+### Code
+
 ``` python
 import csv
 import matplotlib.pyplot as plt
@@ -213,6 +219,8 @@ import warnings
 import csv 
 import matplotlib.pyplot as plt
 ```
+
+### Code
 
 ``` python
 import warnings
