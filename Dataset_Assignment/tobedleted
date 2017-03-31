@@ -1,0 +1,57 @@
+import warnings
+warnings.filterwarnings('ignore')
+
+# the following line is jupyter notebook specific 
+%matplotlib inline
+
+import csv 
+import matplotlib.pyplot as plt
+import collections
+
+filename = "befkbhalderkoencivst.csv"
+
+with open(filename) as file:
+    reader = csv.reader(file)
+    headerrow = next(reader)
+    
+    
+    distribution_male = {}
+    distribution_female = {}
+    for row in reader:
+        male = 0
+        female = 0        
+        arr = row[0].title()
+        
+        
+            
+        if(row[4].isdigit() == 1):
+            male = int(row[4])
+
+        if(row[2].isdigit() == 0 <= 10):
+            if arr not in distribution_male.keys():
+                distribution_male[arr] = male
+            else:
+                distribution_male[arr] += male
+            
+            
+        if(row[4].isdigit() == 2):
+            female = int(row[4])
+        
+        if arr not in distribution_female.keys():
+            distribution_female[arr] = female
+        else:
+            distribution_female[arr] += female
+            
+    men_sorted = sorted(distribution_male, key=distribution_male.get, reverse=True)
+    men_ordered = sorted(distribution_male.items(), key=lambda t: t[1], reverse = True)
+    women_sorted = sorted(distribution_female, key=distribution_female.get, reverse=True)
+    women_ordered = sorted(distribution_female.items(), key=lambda t: t[1], reverse = True)
+    
+
+        
+    men = sorted(men_ordered)
+    women = sorted(women_ordered)
+    print('Men')
+    print(men)
+    #print('Women')
+    #print(women)
