@@ -1,3 +1,6 @@
+# Support danish non-ASCII characters
+# -*- coding: utf-8 -*-
+
 import csv
 import collections
 
@@ -46,16 +49,12 @@ with open(filename) as f:   ## encoding='latin-1'
     ppl2k_sorted = sorted(ppl2000, key=ppl2000.get, reverse=True)
     ppl15_sorted = sorted(ppl2015, key=ppl2015.get, reverse=True)
     ##print(ppl_sorted)
-    for index, citypart in enumerate(ppl_sorted[:3]):
+    for index, citypart in enumerate(ppl92_sorted[:3]):
         print('The number {} most populated city part in 1992 is {}.'.format(index+1,citypart))
     for index, citypart in enumerate(ppl2k_sorted[:3]):
         print('The number {} most populated city part in 2000 is {}.'.format(index+1,citypart))
     for index, citypart in enumerate(ppl15_sorted[:3]):
         print('The number {} most populated city part in 2015 is {}.'.format(index+1,citypart))
 
-    ppl92_ordered = collections.OrderedDict(sorted(ppl1992.items(), key=lambda t: t[1], reverse = True))
-    ppl2k_ordered = collections.OrderedDict(sorted(ppl2000.items(), key=lambda t: t[1], reverse = True))
-    ppl15_ordered = collections.OrderedDict(sorted(ppl2015.items(), key=lambda t: t[1], reverse = True))
-    print(ppl92_ordered)
-    print(ppl2k_ordered)
-    print(ppl15_ordered)
+    print("City parts description:")
+    print(" 1=Indre By, 2=Østerbro, 3=Nørrebro, 4=Vesterbro/Kgs. Enghave, 5=Valby, 6=Vanløse, 7=Brønshøj-Husum, 8=Bispebjerg, 9=Amager Øst, 10=Amager Vest, 99=Udenfor inddeling")
