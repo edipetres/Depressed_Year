@@ -2,10 +2,8 @@ import os
 import requests
 import csv
 import matplotlib
-
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
-from pprint import pprint
 
 url = 'http://data.kk.dk/dataset/9070067f-ab57-41cd-913e-bc37bfaf9acd/resource/9fbab4aa-1ee0-4d25-b2b4-b7b63537d2ec/download/befkbhalderkoencivst.csv'
 filename = url.split('/')[-1]
