@@ -25,10 +25,7 @@ def getFile(url):
 def plotPieChart(mydict, title_param='Change me..'):
     val_sum = sum(mydict.values())
     values = mydict.values()
-    fractions = [] # create fractions of 100
-    for val in values:
-        frac = (val * 100 / val_sum)
-        fractions.append(frac)
+    fractions = [val * 100 / val_sum for val in values]
     
     # make the plot
     figure(1, figsize=(7,7))
