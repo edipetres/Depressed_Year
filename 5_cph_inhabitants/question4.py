@@ -25,10 +25,7 @@ def getFile(url):
 def plotPieChart(mydict, title_param='Change me..'):
     val_sum = sum(mydict.values())
     values = mydict.values()
-    fractions = [] # create fractions of 100
-    for val in values:
-        frac = (val * 100 / val_sum)
-        fractions.append(frac)
+    fractions = [val * 100 / val_sum for val in values]
     
     # make the plot
     figure(1, figsize=(7,7))
@@ -55,22 +52,25 @@ with open(fname) as f:
     for row in reader:
         year = int(row[0])
         bydel = int(row[1])
+        no_ppl = int(row[5])
 
         if bydel in [1, 2, 3]:
             status = row[3]
 
             if year == 2000:
                 if status not in statuses_2000.keys():
-                    statuses_2000[status] = 1
+                    statuses_2000[status] = no_ppl
                 else:
-                    statuses_2000[status] += 1
+                    statuses_2000[status] += no_ppl
             if year == 2015:
                 if status not in statuses_2015.keys():
-                    statuses_2015[status] = 1
+                    statuses_2015[status] = no_ppl
                 else:
-                    statuses_2015[status] += 1
+                    statuses_2015[status] += no_ppl
         
 
     plotPieChart(statuses_2000, 'Marital statuses in 2000')
     plotPieChart(statuses_2015, 'Marital statuses in 2015')
+    # print(statuses_2000)
+    # print(statuses_2015)
     
