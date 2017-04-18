@@ -26,6 +26,9 @@ ratings_dict = {}
 lengths_dict = {}
 title_lengths = {}
 years_dict = {}
+scatter_years = []
+scatter_length = []
+lengths_per_year_dict = {}
 with open(filename) as f:
     reader = csv.reader(f)
     header_row = next(reader)
@@ -43,9 +46,9 @@ with open(filename) as f:
 
         # To be able to show the majority on one graph, 
         # we ignore the few moves longer than 200 mins
-        if length not in lengths_dict.keys() and length < 200:
+        if length not in lengths_dict.keys():
             lengths_dict[length] = 1
-        elif length < 200:
+        else:
             lengths_dict[length] += 1
 
         if title_length not in title_lengths.keys() and title_length < 70:
@@ -58,6 +61,34 @@ with open(filename) as f:
         else:
             years_dict[year] += 1
 
+        scatter_length.append(length)
+        scatter_years.append(year)
+
+        # Question 3: create median line for year and length of movies
+        if year not in lengths_per_year_dict.keys():
+            lengths_per_year_dict[year] = [length]
+        else:
+            lengths_per_year_dict[year].append(length)
+
+
+# Calculate average length per year for median line
+avg_length_per_year_dict = {}
+for year, lengths_arr in lengths_per_year_dict.items():
+    avg_length = sum(lengths_arr) / len(lengths_arr)
+    avg_length_per_year_dict[year] = avg_length
+
+
+plt.scatter(scatter_years, scatter_length, c='b', alpha=0.3, s=3)
+plt.plot(avg_length_per_year_dict.keys(), avg_length_per_year_dict.values(), linewidth=2, label='Median line')
+plt.title('Scatter plot with year and length of movies')
+plt.xlabel('Year')
+plt.ylabel('Length of movie')
+plt.xlim(1890, 2010)
+plt.ylim(-10,300)
+plt.savefig('images/scatterplot_year_length')
+plt.clf()
+
+
 # Plot histogram for movie lengths
 lengths_x_axis = lengths_dict.keys()
 lengths_y_axis = lengths_dict.values()
@@ -69,6 +100,8 @@ plt.xlabel("Length", fontsize=10)
 plt.ylabel("No. of movies", fontsize=10)
 plt.tick_params(axis='both', which='major', labelsize=10)
 plt.xticks(range(0,200, 10))
+plt.xlim(-10, 200)
+plt.ylim(-10,2000)
 plt.savefig('images/length_dist.png')
 plt.clf()
 
