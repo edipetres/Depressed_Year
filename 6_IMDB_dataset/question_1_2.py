@@ -69,7 +69,7 @@ plt.xlabel("Length", fontsize=10)
 plt.ylabel("No. of movies", fontsize=10)
 plt.tick_params(axis='both', which='major', labelsize=10)
 plt.xticks(range(0,200, 10))
-plt.savefig('length_dist.png')
+plt.savefig('images/length_dist.png')
 plt.clf()
 
 
@@ -84,7 +84,7 @@ plt.xlabel('Rating', fontsize=10)
 plt.ylabel('No. of movies', fontsize=10)
 plt.tick_params(axis='both', which='major', labelsize=10)
 plt.xticks(range(1,11))
-plt.savefig('ratings_dist.png')
+plt.savefig('images/ratings_dist.png')
 plt.clf()
 
 
@@ -99,7 +99,7 @@ plt.xlabel('Char length', fontsize=10)
 plt.ylabel('No. of movies', fontsize=10)
 plt.tick_params(axis='both', which='major', labelsize=10)
 plt.xticks(range(0,60, 5))
-plt.savefig('title_length_distrib.png')
+plt.savefig('images/title_length_distrib.png')
 plt.clf()
 
 
@@ -115,6 +115,6 @@ plt.xlabel('Years', fontsize=10)
 plt.ylabel('No. of movies', fontsize=10)
 plt.tick_params(axis='both', which='major', labelsize=10)
 plt.xticks(range(1890,2010, 10), rotation=45)
-plt.savefig('years_distrib.png')
+plt.savefig('images/years_distrib.png')
 plt.clf()
 
